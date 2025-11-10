@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Selection as Markdown",
+  "version": "2.2.0",
+  "description": "Alt+C で選択範囲を Markdown としてコピー。通常のコピーは変更しません。",
+  "permissions": ["scripting", "activeTab", "clipboardWrite"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "commands": {
+    "copy_as_markdown": {
+      "suggested_key": { "default": "Alt+C", "mac": "Alt+C" },
+      "description": "選択範囲をMarkdownとしてコピー"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["html_to_markdown.js", "content.js"],
+    "run_at": "document_idle"
+  }],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
