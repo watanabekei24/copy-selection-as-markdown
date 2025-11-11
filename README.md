@@ -17,17 +17,17 @@
 
 ## 使い方
 
-- Webページ上でコピー（`Cmd/Ctrl + C` 、右クリック -> コピー）すると、選択範囲が Markdown としてクリップボードに入ります。
-- エディタや入力欄内のコピーは、そのまま通常のコピーです。
+- Webページ上でコピーしたい範囲を選択後、`Alt/Option + C` すると、選択範囲が Markdown としてクリップボードに入ります。
+- エディタや入力欄内のコピーは、そのまま通常のコピー（Markdown変換なし）です。
 
-## 既知の制限 / カスタマイズ
+## カスタマイズ
 
-- さらに網羅的な変換をしたい場合は、`html_to_markdown.js` を置き換えたり、ルールを追加してください。
+- 変換処理をカスタマイズをしたい場合は、`html_to_markdown.js` を置き換えたり、ルールを追加してください。
 - 一時的に無効化したい場合は、`chrome://extensions` でトグルしてオフにしてください。
 
 ## ファイル構成
 
 - `manifest.json` … Chrome 拡張.Manifest v3
-- `content.js` … コピーイベントをフックして Markdown を生成・書き込み
-- `html_to_markdown.js` … HTML→Markdown の軽量コンバータ
+- `content.js` … キーボードイベントをフックして Markdown を生成・書き込み
+- `html_to_markdown.js` … HTML→Markdownの変換
 - `icon*.png` … アイコン
