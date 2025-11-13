@@ -31,3 +31,7 @@
 - `content.js` … キーボードイベントをフックして Markdown を生成・書き込み
 - `html_to_markdown.js` … HTML→Markdownの変換
 - `icon*.png` … アイコン
+
+## Chrome更新時などで動作しなくなった場合
+1. URLバーに「chrome://extensions/shortcuts」を入力し遷移する。
+2. 「Copy Selection as Markdown」項目に「Alt/Option+c」のショートカットを割り当てる。
